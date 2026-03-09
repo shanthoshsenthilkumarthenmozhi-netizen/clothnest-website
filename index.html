@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClothNest – Buying Office</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  </head>
+  <style>
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(1);
+      filter: blur(2px);
+      transition:
+        opacity 1.2s ease-in-out,
+        transform 6s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+    html {
+    scroll-behavior: smooth;
+  }
+  </style>
+
+  <body class="font-sans text-slate-800">
+    <!-- NAVBAR -->
+    <header class="bg-slate-900 text-white">
+      <nav
+        class="fixed top-0 w-full z-50 bg-[#0f172a]/70 backdrop-blur-md shadow-lg"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        >
+        <div class="flex items-center space-x-3">
+          <!-- Logo Container -->
+        <button id="logoBtn" class="flex items-center space-x-3">
+          <div
+            class="w-10 h-10 
+                  flex items-center justify-center"
+          >
+            <img src="assests/images/logo.PNG" class="h-20 rounded object-contain" />
+          </div>
+
+          <span class="hidden sm:inline text-2xl font-bold text-white tracking-wide">
+            Cloth<span class="text-sky-400">Nest</span>
+          </span>
+        </button>
+
+
+  <!-- Brand Text
+  <span class="text-2xl font-bold text-white tracking-wide">
+    Cloth<span class="text-sky-400">Nest</span>
+  </span> -->
+</div>
+
+
+          <ul class="hidden md:flex space-x-8 text-slate-300 font-medium">
+            <li>
+              <a href="index.html" class="hover:text-sky-400 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-sky-400 transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-sky-400 transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#products" class="hover:text-sky-400 transition"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-sky-400 transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button id="menuBtn" class="md:hidden text-white text-3xl">☰</button>
+        </div>
+      </nav>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden fixed top-16 left-0 w-full z-40 bg-slate-800 shadow-lg"
+      >
+        <nav class="flex flex-col px-6 py-4 space-y-3 text-white">
+          <a href="index.html" class="hover:text-slate-300">Home</a>
+          <a href="#about" class="hover:text-slate-300">About</a>
+          <a href="#services" class="hover:text-slate-300">Services</a>
+          <a href="#products" class="hover:text-slate-300">Products</a>
+          <a href="#contact" class="hover:text-slate-300">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative h-screen overflow-hidden pt-24">
+      <!-- SLIDES -->
+      <div id="slider" class="absolute inset-0">
+        <img src="assests/images/factory.jpg" class="slide active" />
+        <img src="assests/images/machine.jpg" class="slide" />
+        <img src="assests/images/gament-home.jpg" class="slide" />
+      </div>
+
+      <!-- DARK OVERLAY -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#0f172a]/80 via-[#0f172a]/60 to-[#0f172a]/80"
+      ></div>
+
+      <!-- TEXT CONTENT -->
+<div
+  class="relative z-10 flex items-center justify-center h-full text-center px-6">
+  <div class="flex flex-col items-center">
+
+    <!-- LOGO -->
+    <!-- <div
+      class="mb-6 w-24 h-24 md:w-28 md:h-28
+             bg-white/90 backdrop-blur
+             rounded-2xl shadow-xl
+             flex items-center justify-center
+             animate-fade"
+    >
+      <img
+        src="assests/images/logo.PNG"
+        alt="ClothNest Logo"
+        class="w-16 md:w-20 object-contain"
+      />
+    </div> -->
+
+    <!-- BADGE -->
+    <span
+      class="inline-block bg-sky-500/20 text-sky-400
+             px-4 py-1 rounded-full text-sm mb-4"
+    >
+      GARMENT BUYING OFFICE
+    </span>
+
+    <!-- TITLE -->
+    <h1 class="text-4xl md:text-6xl font-bold text-white">
+      Cloth<span class="text-sky-400">Nest</span>
+    </h1>
+
+    <!-- TAGLINE -->
+    <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl">
+      Sourcing with Quality, Compliance & Trust
+    </p>
+
+  </div>
+</div>
+
+      
+      </div>
+    </section>
+
+      
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+
+          <!-- LEFT CONTENT -->
+          <div>
+            <span
+              class="inline-block bg-sky-500/10 text-sky-600
+                    px-4 py-1 rounded-full text-sm font-semibold mb-4"
+            >
+              ABOUT CLOTHNEST
+            </span>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+              Your Trusted Garment Buying Office Since 2024
+            </h2>
+
+            <p class="text-slate-600 leading-relaxed mb-6">
+              Founded in 2024 in Tiruppur, ClothNest connects global buyers
+              with reliable garment manufacturers. We specialize in sourcing,
+              quality control, production follow-ups, and compliance monitoring
+              to ensure seamless and transparent execution.
+            </p>
+
+            <p class="text-slate-600 leading-relaxed mb-8">
+              From design coordination to final shipment, we ensure every
+              garment meets international standards while maintaining ethical
+              and sustainable practices across the supply chain.
+            </p>
+
+            <!-- BULLET POINTS -->
+            <div class="grid sm:grid-cols-2 gap-4 text-slate-700">
+              <div class="flex items-start gap-3">
+                <span class="text-sky-500 mt-1">✔</span>
+                Vendor Sourcing
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-sky-500 mt-1">✔</span>
+                Quality Inspections
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-sky-500 mt-1">✔</span>
+                Production Monitoring
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-sky-500 mt-1">✔</span>
+                On-time Delivery
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGES -->
+          <div class="relative">
+
+            <!-- Main Image -->
+            <img
+              src="assests/images/man-creates-leather-ware.jpg"
+              alt="Garment Factory"
+              class="rounded-3xl shadow-2xl
+            w-full object-cover
+            blur-[1px] brightness-95
+            transition duration-500
+            hover:blur-0"
+            />
+
+            <!-- Secondary Floating Image -->
+            <img
+              src="assests/images/woman-standing-factory-with-thread.jpg"
+              alt="Garment Machinery"
+              class="absolute -bottom-10 -left-10
+            w-40 md:w-56
+            rounded-2xl shadow-xl
+            border-4 border-white
+            blur-[0.5px] brightness-100
+            transition duration-500
+            hover:blur-0"
+            />
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-blue-100">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Section Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block bg-sky-500/10 text-sky-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">OUR SERVICES </span>
+
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            End-to-End Garment Buying Solutions
+          </h2>
+
+          <p class="text-slate-600 leading-relaxed">
+            ClothNest provides complete buying office services, supporting buyers from product development to final shipment with transparency, quality control, and timely execution.
+          </p>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          <!-- Card 1 -->
+          <div
+            class="group p-8 rounded-3xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition duration-300 bg-white">
+            <div
+              class="w-14 h-14 mx-auto text-3xl flex items-center justify-center rounded-xl bg-sky-500/10 text-sky-600 mb-6 group-hover:bg-sky-500 group-hover:text-white transition">
+              <i class="fa-solid fa-industry text-3xl"></i>
+            </div>
+            <h3 class="text-xl text-center font-semibold text-slate-900 mb-3">Vendor Sourcing</h3>
+
+            <p class="text-slate-600 leading-relaxed">
+              Identifying and onboarding reliable garment manufacturers based on buyer requirements, capacity, compliance, and quality standards.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="group p-8 rounded-3xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition duration-300 bg-white">
+            <div
+              class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-sky-500/10 text-sky-600 mb-6 group-hover:bg-sky-500 group-hover:text-white transition">
+              <i class="fa-solid fa-clipboard-check text-3xl"></i>
+            </div>
+
+            <h3 class="text-xl text-center font-semibold text-slate-900 mb-3">
+              Quality Control & Inspection
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed">
+              Inline and final inspections to ensure garments meet buyer specifications, quality standards, and compliance requirements.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="group p-8 rounded-3xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition duration-300 bg-white">
+            <div
+              class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-sky-500/10 text-sky-600 mb-6 group-hover:bg-sky-500 group-hover:text-white transition">
+              <i class="fa-solid fa-shirt text-3xl"></i>
+            </div>
+
+            <h3 class="text-xl text-center font-semibold text-slate-900 mb-3">
+              Product Development
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed"> Coordinating sampling, fabric selection, trims, and design execution based on buyer tech packs or mood boards.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="group p-8 rounded-3xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition duration-300 bg-white">
+            <div
+              class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-sky-500/10 text-sky-600 mb-6 group-hover:bg-sky-500 group-hover:text-white transition">
+              <i class="fa-solid fa-screwdriver-wrench text-3xl"></i>
+            </div>
+
+            <h3 class="text-xl text-center font-semibold text-slate-900 mb-3">
+              Production Monitoring
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed">
+              Continuous production follow-ups to ensure correct execution, timely output, and smooth coordination between buyers and factories.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="group p-8 rounded-3xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition duration-300 bg-white">
+            <div
+              class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-sky-500/10 text-sky-600 mb-6  group-hover:bg-sky-500 group-hover:text-white transition">
+             <i class="fa-solid fa-file-circle-check text-3xl"></i>
+            </div>
+
+            <h3 class="text-xl text-center font-semibold text-slate-900 mb-3">
+              Compliance & Audits
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed">
+              Ensuring factories follow social, safety, and ethical compliance standards required by international buyers.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="group p-8 rounded-3xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition duration-300 bg-white">
+            <div
+              class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-sky-500/10 text-sky-600 mb-6 group-hover:bg-sky-500 group-hover:text-white transition">
+           <i class="fa-solid fa-truck-fast text-3xl"></i>
+
+            </div>
+
+            <h3 class="text-xl text-center font-semibold text-slate-900 mb-3">
+              Shipment Coordination
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed">
+              Coordinating packing, documentation, and shipment schedules to ensure smooth and timely delivery to destination ports.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--PRODUCTS SECTION-->
+      <section id="products" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <span class="inline-block bg-sky-500/10 text-sky-600 px-4 py-1 rounded-full text-sm mb-4">
+              OUR PRODUCTS
+            </span>
+
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900">
+              Garment Categories We Handle
+            </h2>
+
+            <p class="mt-6 text-slate-600 max-w-3xl mx-auto">
+              We source, develop, and supply a wide range of knitted and woven garments,
+              ensuring quality, compliance, and on-time delivery for global buyers.
+            </p>
+          </div>
+
+          <!-- Product Grid -->
+         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+            <!-- Product Card 1 -->
+               <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/unisex-t-tshirt.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Unisex T-Shirt
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Soft cotton jersey with clean finish and customizable branding options.
+            </p>
+
+          </div>
+        </div>
+
+ 
+
+            <!-- Product Card 2 -->
+               <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/kid.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Infant Printed Dungaree Set
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+               Comfortable, safe, and export-compliant garments for children.
+            </p>
+
+          </div>
+        </div>
+
+            <!-- Product Card 3 -->
+              <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/match.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Unisex Premium Oversized Hoodie
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Heavyweight fleece with relaxed fit and premium finishing.
+            </p>
+
+          </div>
+        </div>
+
+            <!-- Product Card 4 -->
+           <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/oversized.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Men’s Contemporary Graphic Tee
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Modern fit tee with high-quality print and durable color retention
+            </p>
+
+          </div>
+        </div>
+
+
+
+            <!-- Product Card 5 -->
+             <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/womens.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Women’s Performance Activewear Set
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Stretch performance fabric with breathable comfort and flexible fit.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Product Card 6-->
+         <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/hoody.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Men’s Pullover Hoodie
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Midweight fleece hoodie with structured fit and premium finishing.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Product Card 7-->
+         <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/men-full-sleave.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Men’s Vintage Wash Sweatshirt
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+             Garment-washed fleece with soft hand feel and classic styling.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Product Card 8 -->
+          <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/pant.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Men’s Relaxed Fit Lounge Pants
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Comfortable knit lounge pants with elastic waistband and soft touch fabric.
+            </p>
+
+          </div>
+        </div>
+
+
+         <!-- Product Card 9 -->
+         <div class="group bg-white rounded-xl overflow-hidden 
+            border border-slate-200 
+            hover:shadow-md hover:-translate-y-1 
+            transition duration-300">
+
+            <!-- Image -->
+            <div class="h-40.5 overflow-hidden">
+              <img src="assests/images/clumsy.jpg"
+                  alt="Infant Printed Sleepsuit"
+                  class="w-full h-full object-cover object-center 
+                          transition duration-500 group-hover:scale-105" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-3 text-center">
+
+               <div class="w-10 h-1 bg-sky-400 mx-auto mb-4 rounded-full"></div>
+
+              <h3 class="text-base font-semibold text-slate-900 mb-1 
+                        group-hover:text-sky-500 transition">
+              	Hoodies & Sweatshirts
+              </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Fleece, brushed and loop-knit options with custom branding.
+            </p>
+
+          </div>
+        </div>
+
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+<section id="contact" class="py-20 bg-blue-100">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="inline-block bg-sky-500/10 text-sky-600 px-4 py-1 rounded-full text-sm mb-4">
+        CONTACT US
+      </span>
+
+      <h2 class="text-4xl font-bold text-slate-900">
+        Let’s Start Your Next Collection
+      </h2>
+
+      <p class="mt-6 text-slate-600 max-w-2xl mx-auto">
+        Get in touch with our sourcing team for product development,
+        sampling, pricing, and production support.
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- Left Side Info -->
+      <div class="space-y-4">
+
+        <div>
+          <h3 class="text-lg font-semibold text-slate-900">Email</h3>
+          <p class="text-slate-600">sujith@clothnest.in</p>
+        </div>
+
+       
+        <div>
+          <h3 class="text-lg font-semibold text-slate-900">Office</h3>
+          <p class="text-slate-600">
+            Tiruppur, Tamil Nadu, India
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Right Side Form -->
+     <form action="https://formspree.io/f/mwvrvwgn" method="POST"
+        class="bg-slate-50 p-8 rounded-2xl shadow-sm space-y-4">
+
+        <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">
+        Full Name
+        </label>
+        <input type="text" name="name" required
+        class="w-full border border-slate-300 rounded-lg px-2 py-2 focus:ring-2 focus:ring-sky-400 focus:outline-none">
+        </div>
+
+        <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">
+        Email Address
+        </label>
+        <input type="email" name="email" required
+        class="w-full border border-slate-300 rounded-lg px-2 py-2 focus:ring-2 focus:ring-sky-400 focus:outline-none">
+        </div>
+        <input type="hidden" name="_subject" value="New Inquiry from ClothNest Website">
+        <div>
+        <label class="block text-sm font-medium text-slate-700 mb-2">
+        Message
+        </label>
+        <textarea name="message" rows="4" required
+        class="w-full border border-slate-300 rounded-lg px-2 py-2 focus:ring-2 focus:ring-sky-400 focus:outline-none"></textarea>
+        </div>
+
+        <button
+        class="w-full bg-sky-500 hover:bg-sky-600 text-white py-2 rounded-lg font-medium transition">
+        Send Inquiry
+        </button>
+
+        </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Top Grid -->
+    <div class="grid md:grid-cols-3 gap-12 items-center">
+
+      <!-- Company Info (Left) -->
+      <div>
+        <h3 class="text-2xl font-semibold text-white mb-4">
+          ClothNest Buying Office
+        </h3>
+        <p class="text-slate-400 leading-relaxed">
+          Trusted garment sourcing partner in Tiruppur,
+          delivering quality, compliance, and timely production
+          for global brands.
+        </p>
+      </div>
+
+      <!-- Center Logo -->
+      <div class="flex justify-center">
+        <img src="assests/images/logo2.png" 
+             alt="ClothNest Logo"
+             class="h-40 object-contain">
+      </div>
+
+      <!-- Quick Links (Right) -->
+      <div class="text-left md:text-right">
+        <h4 class="text-lg font-semibold text-white mb-4">
+          Quick Links
+        </h4>
+
+        <ul class="space-y-2 mb-6">
+          <li><a href="index.html" class="hover:text-sky-400 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-sky-400 transition">About</a></li>
+          <li><a href="#products" class="hover:text-sky-400 transition">Products</a></li>
+          <li><a href="#contact" class="hover:text-sky-400 transition">Contact</a></li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="flex md:justify-end space-x-4">
+          <a href="https://www.instagram.com/clothnestapparaelsourcing.inc?igsh=eHoyenU5YWdncWgz&utm_source=qr"
+             class="hover:text-sky-400 transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/cloth-nest-apparel-sourcing-inc-aa69493a7"
+             class="hover:text-sky-400 transition">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="border-t border-slate-700 mt-12 pt-6 text-center text-slate-500 text-sm">
+      © 2024 ClothNest Buying Office. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+
+  <div
+  id="companyModal"
+  class="fixed inset-0 bg-black/60 backdrop-blur
+         hidden z-50 flex items-center justify-center px-4">
+  <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-xl relative">
+    <!-- Close -->
+    <button
+      id="closeModal"
+      class="absolute top-3 right-3 text-gray-400 hover:text-black text-xl"
+    >
+      ✕
+    </button>
+
+    <!-- Logo -->
+    <div class="flex justify-center mb-4">
+      <img src="assests/images/logo.PNG" class="h-25" />
+    </div>
+
+    <h3 class="text-2xl font-bold text-center mb-2">
+      ClothNest
+    </h3>
+
+    <p class="text-center text-gray-600 mb-4">
+      Garment Buying Office
+    </p>
+
+    <div class="text-sm text-gray-700 space-y-2 text-center">
+      <p>📍 Tiruppur, India</p>
+      <p>📧 sujith@clothnest.in</p>
+      
+    </div>
+
+    <div class="mt-6 text-center">
+      <a
+        href="contact.html"
+        class="inline-block bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition"
+      >
+        Contact Us
+      </a>
+    </div>
+  </div>
+</div>
+
+  </body>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 4000);
+  </script>
+
+  <script>
+  const logoBtns = document.querySelectorAll("#logoBtn");
+  const modal = document.getElementById("companyModal");
+  const closeModal = document.getElementById("closeModal");
+
+  logoBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+</script>
+
+</html>

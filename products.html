@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – ClothNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="font-sans text-slate-800">
+    <!-- NAVBAR -->
+    <header class="bg-slate-900 text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold">ClothNest</div>
+
+        <nav class="space-x-6 hidden md:block">
+          <a href="index.html" class="hover:text-slate-300">Home</a>
+          <a href="about.html" class="hover:text-slate-300">About</a>
+          <a href="services.html" class="hover:text-slate-300">Services</a>
+          <a href="products.html" class="text-slate-300">Products</a>
+          <a href="contact.html" class="hover:text-slate-300">Contact</a>
+        </nav>
+
+        <button id="menuBtn" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden bg-slate-800 md:hidden">
+        <nav class="flex flex-col px-6 py-4 space-y-3">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-16 text-center">
+        <h1 class="text-4xl font-bold text-slate-900 mb-4">Our Products</h1>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Apparel categories we source and manage for global buyers
+        </p>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <!-- MEN -->
+      <h2 class="text-2xl font-bold mb-8">Men’s Wear</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">T-Shirts & Polos</p>
+          <p class="text-sm text-slate-600 mt-1">
+            Cotton, Organic, Performance
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Shirts</p>
+          <p class="text-sm text-slate-600 mt-1">Casual, Formal, Denim</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Bottoms</p>
+          <p class="text-sm text-slate-600 mt-1">Jeans, Chinos, Shorts</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Outerwear</p>
+          <p class="text-sm text-slate-600 mt-1">
+            Jackets, Hoodies, Sweatshirts
+          </p>
+        </div>
+      </div>
+
+      <!-- WOMEN -->
+      <h2 class="text-2xl font-bold mb-8">Women’s Wear</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Tops & Blouses</p>
+          <p class="text-sm text-slate-600 mt-1">Woven, Knit, Fashion Tops</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Dresses</p>
+          <p class="text-sm text-slate-600 mt-1">Casual, Evening, Party Wear</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Bottoms</p>
+          <p class="text-sm text-slate-600 mt-1">Skirts, Pants, Leggings</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Outerwear</p>
+          <p class="text-sm text-slate-600 mt-1">Jackets, Shrugs, Coats</p>
+        </div>
+      </div>
+
+      <!-- KIDS -->
+      <h2 class="text-2xl font-bold mb-8">Kids & Baby Wear</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Infant Wear</p>
+          <p class="text-sm text-slate-600 mt-1">Rompers, Onesies, Sets</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Boys Wear</p>
+          <p class="text-sm text-slate-600 mt-1">T-Shirts, Shorts, Sets</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Girls Wear</p>
+          <p class="text-sm text-slate-600 mt-1">Dresses, Tops, Skirts</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-4">
+          <p class="font-semibold">Sleep & Loungewear</p>
+          <p class="text-sm text-slate-600 mt-1">Pyjamas, Nightwear Sets</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-slate-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          Custom Styles & Private Label Available
+        </h2>
+        <p class="text-slate-300 mb-6">
+          Share your tech packs and designs — we’ll handle the rest.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-block bg-white text-slate-900 px-6 py-3 rounded font-semibold hover:bg-slate-200 transition"
+        >
+          Enquire Now
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-8 text-center">
+      <p>© 2026 ClothNest. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

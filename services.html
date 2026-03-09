@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – ClothNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="font-sans text-slate-800">
+    <!-- NAVBAR -->
+    <header class="bg-slate-900 text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold">ClothNest</div>
+
+        <nav class="space-x-6 hidden md:block">
+          <a href="index.html" class="hover:text-slate-300">Home</a>
+          <a href="about.html" class="hover:text-slate-300">About</a>
+          <a href="services.html" class="text-slate-300">Services</a>
+          <a href="products.html" class="hover:text-slate-300">Products</a>
+          <a href="contact.html" class="hover:text-slate-300">Contact</a>
+        </nav>
+
+        <button id="menuBtn" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden bg-slate-800 md:hidden">
+        <nav class="flex flex-col px-6 py-4 space-y-3">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-16 text-center">
+        <h1 class="text-4xl font-bold text-slate-900 mb-4">Our Services</h1>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          End-to-end buying office solutions for global apparel brands
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- SERVICE CARD -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Product Sourcing</h3>
+          <p class="text-slate-600 text-sm">
+            Identifying reliable manufacturers that match buyer requirements,
+            capacity, and compliance standards.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Vendor Development</h3>
+          <p class="text-slate-600 text-sm">
+            Building long-term partnerships with factories to ensure quality,
+            pricing, and production efficiency.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Sampling & Costing</h3>
+          <p class="text-slate-600 text-sm">
+            Coordinating samples, cost negotiations, and approvals before bulk
+            production.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Production Follow-up</h3>
+          <p class="text-slate-600 text-sm">
+            Monitoring production schedules to ensure timely execution and
+            delivery.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Quality Assurance</h3>
+          <p class="text-slate-600 text-sm">
+            In-line, pre-final, and final inspections to meet international
+            quality standards.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Compliance & Audits</h3>
+          <p class="text-slate-600 text-sm">
+            Ensuring factories comply with social, ethical, and environmental
+            standards.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Logistics Coordination</h3>
+          <p class="text-slate-600 text-sm">
+            Supporting shipment planning, documentation, and export
+            coordination.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Buyer Communication</h3>
+          <p class="text-slate-600 text-sm">
+            Acting as a local representative to ensure clear, timely
+            communication.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Risk Management</h3>
+          <p class="text-slate-600 text-sm">
+            Identifying potential production risks and resolving issues
+            proactively.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-slate-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          Looking for a Reliable Buying Office?
+        </h2>
+        <p class="text-slate-300 mb-6">
+          Partner with ClothNest for quality-driven sourcing and execution.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-block bg-white text-slate-900 px-6 py-3 rounded font-semibold hover:bg-slate-200 transition"
+        >
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-8 text-center">
+      <p>© 2026 ClothNest. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
